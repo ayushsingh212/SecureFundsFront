@@ -143,13 +143,13 @@ export default function LoginPage() {
               Remember this device for 30 days
             </div>
 
-
-            <button
+            <Link href= "/dashboard">  <button
               type="submit"
               className="w-full bg-navy hover:bg-navy-light text-white py-4 font-bold uppercase tracking-widest text-sm transition-all"
             >
               Secure Login
-            </button>
+            </button></Link>
+          
 
           </form>
 
