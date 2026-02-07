@@ -14,10 +14,10 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <h1 className="text-xl font-extrabold text-navy tracking-tighter leading-none">
-              SECUREFUNDS
+              SECURE FUNDS FINANCE
             </h1>
             <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-emerald-corporate">
-              RBI Authorized Partner
+              TRUSTED BY CUSTOMERS
             </span>
           </div>
         </Link>
@@ -38,9 +38,13 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-6">
-          <button className="text-sm font-semibold text-navy hover:text-emerald-corporate transition-colors">
+         <Link href={"/login"}>
+            <button className="text-sm font-semibold text-navy hover:text-emerald-corporate transition-colors">
             Client Login
           </button>
+         </Link>
+        
+       
           <button className="bg-navy hover:bg-navy-light text-white text-xs font-bold uppercase tracking-widest px-8 py-3 transition-all shadow-sm">
             Inquire Now
           </button>

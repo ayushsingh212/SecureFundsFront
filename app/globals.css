@@ -32,3 +32,13 @@
     @apply w-full;
   }
 }
+.form-label {
+  @apply block text-xs font-bold uppercase tracking-widest mb-2 text-slate-600;
+}
+
+.form-input {
+  @apply w-full border border-slate-200 px-4 py-3 focus:outline-none focus:border-emerald-corporate;
+}
+.dashboard-card {
+  @apply bg-white border border-slate-200 rounded shadow-sm p-6;
+}
