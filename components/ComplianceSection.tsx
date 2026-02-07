@@ -2,8 +2,8 @@ export default function ComplianceSection() {
   const partners = [
     {
       icon: "account_balance",
-      title: "RBI Partnered",
-      subtitle: "Regulated Entity",
+      title: "Customer Trusted",
+      subtitle: "Trust and Service",
     },
     {
       icon: "verified_user",

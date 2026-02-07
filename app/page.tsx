@@ -6,6 +6,7 @@ import ProcessSection from "@/components/ProcessSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import LoanExplorer from "@/components/LoanExplorer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <ComplianceSection />
+        <LoanExplorer/>
         <ServicesSection />
         <ProcessSection />
         <CTASection />
