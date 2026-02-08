@@ -1,121 +1,157 @@
+"use client";
+
+import Link from "next/link";
+
 export default function ServicesSection() {
   const services = [
     {
+      icon: "person",
+      title: "Personal Loan",
+      description:
+        "General information and referral assistance for personal loan enquiries.",
+    },
+    {
+      icon: "home",
+      title: "Home Loan",
+      description:
+        "Information support and referral for home loan requirements.",
+    },
+    {
       icon: "business",
-      title: "Enterprise Liquidity",
+      title: "Business Loan",
       description:
-        "Customized working capital solutions for mid-to-large scale operations, focusing on long-term fiscal health.",
-      features: ["Competitive Prime Rates", "Tax-Efficient Structure"],
-      buttonText: "Details",
-      buttonClass:
-        "w-full py-4 border border-slate-200 text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition-all",
-      cardClass: "bg-white border border-slate-200 p-12 hover:border-navy transition-all duration-300",
-      textClass: "text-slate-500",
+        "Guidance and enquiry referral for business financing needs.",
     },
     {
-      icon: "real_estate_agent",
-      title: "Asset Financing",
+      icon: "apartment",
+      title: "Loan Against Property",
       description:
-        "High-value property and infrastructure financing with bespoke amortization schedules and advisory support.",
-      features: ["Up to 30-Year Tenure", "Dedicated Portfolio Manager"],
-      buttonText: "Connect with Advisor",
-      buttonClass:
-        "w-full py-4 bg-emerald-corporate text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-navy transition-all",
-      cardClass: "bg-navy text-white p-12 shadow-2xl relative overflow-hidden",
-      textClass: "text-slate-400",
-      premium: true,
-    },
-    {
-      icon: "account_balance_wallet",
-      title: "Bespoke Personal Credit",
-      description:
-        "Exclusive credit lines for high-net-worth individuals, designed for immediate liquidity and wealth preservation.",
-      features: ["Zero Prepayment Penalties", "Priority Disbursement"],
-      buttonText: "Inquire",
-      buttonClass:
-        "w-full py-4 border border-slate-200 text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition-all",
-      cardClass: "bg-white border border-slate-200 p-12 hover:border-navy transition-all duration-300",
-      textClass: "text-slate-500",
+        "Information and referral assistance for property-backed loans.",
     },
   ];
 
   return (
-    <section className="py-32 bg-off-white">
+    <section
+      id="services"
+      className="py-28 bg-off-white border-t border-slate-200"
+    >
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-2xl">
-            <h3 className="text-4xl font-serif text-navy mb-6">
-              Strategic Credit Facilities
-            </h3>
-            <p className="text-slate-500 font-light text-lg">
-              Our financial instruments are meticulously crafted to support
-              sustainable growth and institutional expansion.
-            </p>
-          </div>
-          <a
-            href="#portfolio"
-            className="text-xs font-bold uppercase tracking-widest text-navy flex items-center gap-2 group"
-          >
-            View Full Portfolio{" "}
-            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-              arrow_forward
-            </span>
-          </a>
+
+
+        <div className="text-center mb-20">
+
+          <h3 className="text-3xl font-serif text-navy mb-4">
+            Types of Loan Information We Assist With
+          </h3>
+
+          <p className="text-sm text-slate-500 max-w-2xl mx-auto">
+            Below are common loan categories. We also assist with other
+            loan-related enquiries.
+          </p>
+
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+
           {services.map((service, index) => (
-            <div key={index} className={service.cardClass}>
-              {service.premium && (
-                <div className="absolute top-0 right-0 p-4">
-                  <span className="bg-emerald-corporate text-[9px] font-bold px-2 py-1 uppercase tracking-widest">
-                    Premium
-                  </span>
-                </div>
-              )}
+            <div
+              key={index}
+              className="bg-white border border-slate-200 p-8 text-center hover:shadow-md transition-all"
+            >
 
-              <span
-                className={`material-symbols-outlined text-3xl ${
-                  service.premium ? "text-emerald-corporate" : "text-navy"
-                } mb-10`}
-              >
-                {service.icon}
-              </span>
 
-              <h4
-                className={`text-xl font-bold ${
-                  service.premium ? "text-white" : "text-navy"
-                } mb-4`}
-              >
+              <div className="w-14 h-14 mx-auto mb-6 bg-navy/5 rounded-full flex items-center justify-center">
+
+                <span className="material-symbols-outlined text-emerald-corporate text-2xl">
+                  {service.icon}
+                </span>
+
+              </div>
+
+
+              <h4 className="text-lg font-serif text-navy mb-3">
                 {service.title}
               </h4>
 
-              <p
-                className={`${service.textClass} text-sm leading-relaxed mb-10 font-light`}
-              >
+
+              <p className="text-sm text-slate-500 leading-relaxed font-light mb-8">
                 {service.description}
               </p>
 
-              <ul className="space-y-4 mb-10">
-                {service.features.map((feature, fIndex) => (
-                  <li
-                    key={fIndex}
-                    className={`flex items-center gap-3 text-xs font-bold uppercase tracking-wider ${
-                      service.premium ? "text-white" : "text-navy"
-                    }`}
-                  >
-                    <span className="material-symbols-outlined text-emerald-corporate text-lg">
-                      check
-                    </span>{" "}
-                    {feature}
-                  </li>
-                ))}
-              </ul>
 
-              <button className={service.buttonClass}>{service.buttonText}</button>
+              <Link href="/check-eligibility">
+
+                <button className="w-full py-3 border border-slate-200 text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition-all">
+                  Submit Enquiry
+                </button>
+
+              </Link>
+
+
             </div>
           ))}
+
+
+
+          <div className="bg-navy text-white p-8 text-center flex flex-col justify-between">
+
+
+            <div>
+
+              <div className="w-14 h-14 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center">
+
+                <span className="material-symbols-outlined text-2xl">
+                  more_horiz
+                </span>
+
+              </div>
+
+
+              <h4 className="text-lg font-serif mb-3">
+                Other Loan Types
+              </h4>
+
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-8">
+                We also assist with education, vehicle, MSME, startup,
+                professional and other loan enquiries.
+              </p>
+
+            </div>
+
+
+            <Link href="/check-eligibility">
+
+              <button className="w-full py-3 border border-white/30 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-navy transition-all">
+                Search & Enquire
+              </button>
+
+            </Link>
+
+
+          </div>
+
+
         </div>
+
+
+
+        <div className="mt-16 bg-slate-50 border border-slate-200 p-6 text-center">
+
+          <p className="text-xs text-slate-500 leading-relaxed">
+
+            We provide general loan-related information and referral assistance.
+            We do not approve loans, guarantee sanctions, decide interest rates,
+            or collect payments.
+
+          </p>
+
+        </div>
+
+
       </div>
     </section>
   );

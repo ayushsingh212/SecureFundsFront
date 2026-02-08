@@ -11,13 +11,15 @@ export default function Header() {
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-
         <Link href="/" className="flex items-center gap-3">
 
           <div className="bg-navy p-2 rounded">
-            <span className="material-symbols-outlined text-white text-xl">
-              account_balance
-            </span>
+            <img
+              src="/securefundsfinancelogo.png"
+              width={28}
+              height={28}
+              alt="Logo"
+            />
           </div>
 
           <div className="flex flex-col">
@@ -26,57 +28,47 @@ export default function Header() {
             </h1>
 
             <span className="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-bold text-emerald-corporate">
-              TRUSTED BY CUSTOMERS
+              Loan Information & Referral
             </span>
           </div>
 
         </Link>
 
-
-
-
         <nav className="hidden lg:flex items-center gap-10">
 
-          <Link href="#corporate" className="nav-link">
-            Corporate Banking
+          <Link href="#loans" className="nav-link">
+            Loan Types
           </Link>
 
-          <Link href="#personal" className="nav-link">
-            Personal Credit
+          <Link href="#services" className="nav-link">
+            Services
           </Link>
 
-          <Link href="#wealth" className="nav-link">
-            Wealth Management
+          <Link href="#process" className="nav-link">
+            How It Works
           </Link>
 
-          <Link href="#compliance" className="nav-link">
-            Compliance
+          <Link href="#enquiry" className="nav-link">
+            Check Eligibility
+          </Link>
+
+          <Link href="#contact" className="nav-link">
+            Contact
           </Link>
 
         </nav>
 
-
-
-
         <div className="hidden lg:flex items-center gap-6">
 
-          <Link href="/login">
+          <Link href="#enquiry">
 
-            <button className="text-sm font-semibold text-navy hover:text-emerald-corporate transition-colors">
-              Client Login
+            <button className="bg-navy hover:bg-navy-light text-white text-xs font-bold uppercase tracking-widest px-8 py-3 transition-all shadow-sm">
+              Free Enquiry
             </button>
 
           </Link>
 
-
-          <button className="bg-navy hover:bg-navy-light text-white text-xs font-bold uppercase tracking-widest px-8 py-3 transition-all shadow-sm">
-            Inquire Now
-          </button>
-
         </div>
-
-
-
 
         <button
           onClick={() => setOpen(!open)}
@@ -91,69 +83,63 @@ export default function Header() {
 
       </div>
 
-
-
-
-
       {open && (
 
         <div className="lg:hidden border-t border-slate-200 bg-white shadow-md">
 
           <div className="px-6 py-6 space-y-5">
 
-
             <Link
-              href="#corporate"
+              href="#loans"
               onClick={() => setOpen(false)}
               className="block text-sm font-semibold text-navy"
             >
-              Corporate Banking
+              Loan Types
             </Link>
 
             <Link
-              href="#personal"
+              href="#services"
               onClick={() => setOpen(false)}
               className="block text-sm font-semibold text-navy"
             >
-              Personal Credit
+              Services
             </Link>
 
             <Link
-              href="#wealth"
+              href="#process"
               onClick={() => setOpen(false)}
               className="block text-sm font-semibold text-navy"
             >
-              Wealth Management
+              How It Works
             </Link>
 
             <Link
-              href="#compliance"
+              href="#enquiry"
               onClick={() => setOpen(false)}
               className="block text-sm font-semibold text-navy"
             >
-              Compliance
+              Check Eligibility
             </Link>
 
+            <Link
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="block text-sm font-semibold text-navy"
+            >
+              Contact
+            </Link>
 
+            <div className="pt-4 border-t border-slate-100">
 
-            <div className="pt-4 border-t border-slate-100 space-y-4">
+              <Link href="#enquiry" onClick={() => setOpen(false)}>
 
-
-              <Link href="/login" onClick={() => setOpen(false)}>
-
-                <button className="w-full border border-navy text-navy py-3 text-xs font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition-all">
-                  Client Login
+                <button className="w-full bg-navy text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-navy-light transition-all">
+                  Free Enquiry
                 </button>
 
               </Link>
 
-
-              <button className="w-full bg-navy text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-navy-light transition-all">
-                Inquire Now
-              </button>
-
             </div>
-
 
           </div>
 
