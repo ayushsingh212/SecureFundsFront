@@ -212,8 +212,6 @@ export default function Footer() {
             We do not provide loans and do not guarantee approvals.
 
           </p>
-
-
         </div>
 
 
